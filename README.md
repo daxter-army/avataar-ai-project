@@ -1,8 +1,14 @@
 # Project Assignment
 
-## Demo Link: [Visit Here](daxter-army.github.io/avataar-ai-project)
+## 🌐 Demo Link: [Visit Here](daxter-army.github.io/avataar-ai-project)
 
-## NOTES
+## 🏎️ STATUS
+
+- Both Requirements Completed:
+  - [x] Dynamic Menu
+  - [x] Carousel (Infinite & Finite)
+
+## 📜 NOTES
 
 1. I have tried to follow the convention as per the design system (from the figma file) as much as possible, using the same **variable names as used in the figma file, to mitigate the design and development differences**.
 2. **SCSS implementation:** **Variables**, **Mixins** have been used to encourage code reuse.
@@ -12,3 +18,4 @@
 6. **Carousel Type:** The Carousel has been displayed in 2 forms, which can be changed with the help of a button.
 7. **Enums:** All the constants used in the project are coming from **STATICS** object stored in **src/enums.js**.
 8. **Prettier Integration:** Prettier has been integrated in this project to keep uniformed formatting throughout the files.
+9. **Commit History:** Tried to commit code in atomic commits.
