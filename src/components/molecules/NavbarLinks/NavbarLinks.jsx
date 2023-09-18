@@ -21,10 +21,13 @@ const NavbarLinks = ({
   navbarLinksRef,
   moreButtonRef,
 }) => {
+  // AUXILIARY REFS
   const dropdownRef = useRef();
-  const [isDropdownOn, setIsDropdownOn] = useState(false);
   const linkItemsRef = useRef(new Array(linksData.length).fill(0));
+
+  // AUXILIARY STATES, TO IMPLEMENT UI FEATURES
   const [hiddenItems, setHiddenItems] = useState(0);
+  const [isDropdownOn, setIsDropdownOn] = useState(false);
   const [distanceToDisplace, setDistanceToDisplace] = useState(0);
 
   // WHEN ITEM IN THE DROPDOWN IS CLICKED
@@ -100,7 +103,6 @@ const NavbarLinks = ({
 
   return (
     <nav ref={navbarLinksRef} className={styles.navbarLinksWpr}>
-      {/* <p>{hiddenItems}</p> */}
       {linksData.map((link, idx) => (
         <LinkItem
           key={link.id}
@@ -129,11 +131,13 @@ const NavbarLinks = ({
               : (hiddenItems + 1) * 70 + 0)
           }px)`,
         }}
-        className={cx(styles.dropdownBtn, {
-          [styles.dropdown__activeLabel]: isDropdownOn,
-        })}
+        className={cx(styles.dropdownBtn)}
       >
-        <AnchorTag customClass={""}>{moreButtonData.label}</AnchorTag>
+        <AnchorTag
+          customClass={cx({ [styles.dropdown__activeLabel]: isDropdownOn })}
+        >
+          {moreButtonData.label}
+        </AnchorTag>
         <Icon
           isCursor
           customClass={styles.dropdownIcon}
