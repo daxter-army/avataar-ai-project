@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+.navbarLinksWpr {
+  display: flex;
+  // flex-wrap: wrap;
+  list-style-type: none;
+}
