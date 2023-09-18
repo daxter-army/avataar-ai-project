@@ -1,0 +1,66 @@
+@import "../styles/variables.scss";
+
+// Display
+@mixin displayFlex(
+  $alignItems: center,
+  $justifyContent: center,
+  $flexDirection: row,
+  $gap: 0
+) {
+  display: flex;
+  gap: $gap;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+}
+
+// Fonts
+@mixin h1($fontSize: 3.2rem, $fontStyle: normal, $fw: $fwRegular, $lh: 2rem) {
+  font-size: $fontSize;
+  font-weight: $fw;
+  line-height: $lh;
+  font-style: $fontStyle;
+}
+
+@mixin h3($fontSize: 1.6rem, $fontStyle: normal, $fw: $fwRegular, $lh: 2rem) {
+  font-size: $fontSize;
+  font-weight: $fw;
+  line-height: $lh;
+  font-style: $fontStyle;
+}
+
+@mixin title1(
+  $fontSize: 6.4rem,
+  $fontStyle: normal,
+  $fw: $fwRegular,
+  $lh: 4.2rem
+) {
+  font-size: $fontSize;
+  font-weight: $fw;
+  line-height: $lh;
+  font-style: $fontStyle;
+}
+
+@mixin title2(
+  $fontSize: 2.2rem,
+  $fontStyle: normal,
+  $fw: $fwRegular,
+  $lh: 1.6rem
+) {
+  font-size: $fontSize;
+  font-weight: $fw;
+  line-height: $lh;
+  font-style: $fontStyle;
+}
+
+@mixin title3(
+  $fontSize: 2.4rem,
+  $fontStyle: normal,
+  $fw: $fwRegular,
+  $lh: 3.2rem
+) {
+  font-size: $fontSize;
+  font-weight: $fw;
+  line-height: $lh;
+  font-style: $fontStyle;
+}
