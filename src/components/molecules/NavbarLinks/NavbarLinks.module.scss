@@ -1,0 +1,37 @@
+@import "../../../styles/mixins";
+
+.navbarLinksWpr {
+  display: flex;
+  // flex-wrap: wrap;
+  list-style-type: none;
+
+  .dropdownBtn {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+  }
+
+  .navbarLinksWpr__dropdown {
+    position: absolute;
+    top: 5.8rem;
+    right: 0;
+    z-index: 2;
+    border-radius: 0.4rem;
+    background-color: $black1;
+    color: $white;
+    @include h3;
+  }
+
+  .navbarLinksWpr__hiddenLink {
+    opacity: 0;
+  }
+
+  .dropdown__activeLabel {
+    color: $blue2;
+  }
+
+  .dropdownIcon {
+    margin-top: -0.3rem;
+  }
+}

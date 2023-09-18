@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.button {
+  cursor: pointer;
+  @include h3($fw: $fwBold);
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  border: 0.2rem solid $primaryBlue500;
+}

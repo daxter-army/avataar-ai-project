@@ -1,0 +1,84 @@
+@import "../../../../../styles/mixins.scss";
+
+// VARIABLES FOR EACH SLIDE STYLES
+$adjacentZindex: 2;
+$adjacentSlideScale: 0.6;
+$adjacentSlideTranslateX: 70%;
+
+$backgroundZindex: 1;
+$backgroundSlideScale: 0.4;
+$backgroundSlideTranslateX: 260%;
+
+$backstageZindex: 0;
+$backstageSlideScale: 0.4;
+$backstageSlideTranslateX: 510%;
+
+.carouselCtr {
+  @include displayFlex;
+  position: absolute;
+  left: 50%;
+  will-change: transform;
+
+  .carouselCard {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+.carouselCtr__slidesCtr {
+  position: relative;
+}
+
+.activeSlide {
+  position: relative;
+  z-index: 3;
+  scale: 1;
+}
+
+.adjacentLeftSlide,
+.adjacentRightSlide {
+  position: relative;
+  opacity: 1;
+  z-index: $adjacentZindex;
+  scale: $adjacentSlideScale;
+}
+
+.adjacentLeftSlide {
+  transform: translateX($adjacentSlideTranslateX);
+}
+
+.adjacentRightSlide {
+  transform: translateX(-1 * $adjacentSlideTranslateX);
+}
+
+.backgroundLeftSlide,
+.backgroundRightSlide {
+  position: relative;
+  opacity: 1;
+  z-index: $backgroundZindex;
+  scale: $backgroundSlideScale;
+}
+
+.backgroundLeftSlide {
+  transform: translateX($backgroundSlideTranslateX);
+}
+
+.backgroundRightSlide {
+  transform: translateX(-1 * $backgroundSlideTranslateX);
+}
+
+.backstageLeftSlide,
+.backstageRightSlide {
+  position: relative;
+  opacity: 0;
+  z-index: $backstageZindex;
+  scale: $backstageSlideScale;
+}
+
+.backstageLeftSlide {
+  transform: translateX($backstageSlideTranslateX);
+}
+
+.backstageRightSlide {
+  transform: translateX(-1 * $backstageSlideTranslateX);
+}

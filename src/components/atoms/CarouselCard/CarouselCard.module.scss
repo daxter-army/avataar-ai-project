@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+
+.carouselCard {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  border: 0.1rem solid $white;
+  box-shadow: 0 0.9rem 0.9rem 0 rgba(19, 101, 226, 0.2);
+}
+
+.carouselCard__label {
+  padding: 1.6rem 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $white;
+  @include title2($fw: $fwSemiBold);
+  background-color: $grey2-50;
+}

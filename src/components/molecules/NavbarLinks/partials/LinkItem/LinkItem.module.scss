@@ -1,0 +1,6 @@
+@import "../../../../../styles/mixins";
+
+.linkItem {
+  white-space: nowrap;
+  @include displayFlex($gap: 0.2rem);
+}

@@ -1,0 +1,25 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 4.4rem 6.4rem;
+  @include displayFlex($flexDirection: column, $justifyContent: flex-start);
+}
+
+.carousel__title {
+  @include title1($fw: $fwExtraBold);
+  margin-bottom: 3.2rem;
+  color: $primaryBlack500;
+}
+
+.carousel__subTitle {
+  @include title3;
+  margin-bottom: 4rem;
+  color: $primaryBlack500;
+}
+
+.typeButton {
+  margin-bottom: 1.6rem;
+}

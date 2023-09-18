@@ -13,94 +13,108 @@ export const navbarLinksData = [
     id: STATICS.HOME,
     label: STATICS.HOME,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.ELECTRONICS,
     label: STATICS.ELECTRONICS,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.BOOKS,
     label: STATICS.BOOKS,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.MUSIC,
     label: STATICS.MUSIC,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.MOVIES,
     label: STATICS.MOVIES,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.CLOTHING,
     label: STATICS.CLOTHING,
     link: "#",
+    onTop: true,
+    isSelected: false,
   },
   {
     id: STATICS.GAMES,
     label: STATICS.GAMES,
     link: "#",
+    onTop: true,
+    isSelected: false,
+  },
+];
+
+export const moreButtonData = {
+  label: STATICS.MORE,
+  iconSrc: chevronDown,
+  selectedIconSrc: chevronDownActive,
+};
+
+export const moreOptionsData = [
+  {
+    id: STATICS.FURNITURE,
+    label: STATICS.FURNITURE,
+    link: "#",
+    isSelected: false,
   },
   {
-    id: STATICS.MORE,
-    label: STATICS.MORE,
-    iconSrc: chevronDown,
-    selectedIconSrc: chevronDownActive,
-    options: [
-      {
-        id: STATICS.FURNITURE,
-        label: STATICS.FURNITURE,
-        link: "#",
-        isSelected: false,
-      },
-      {
-        id: STATICS.TRAVEL,
-        label: STATICS.TRAVEL,
-        link: "#",
-        isSelected: false,
-      },
-      {
-        id: STATICS.BOTANICAL,
-        label: STATICS.BOTANICAL,
-        link: "#",
-        isSelected: false,
-      },
-    ],
+    id: STATICS.TRAVEL,
+    label: STATICS.TRAVEL,
     link: "#",
+    isSelected: false,
+  },
+  {
+    id: STATICS.BOTANICAL,
+    label: STATICS.BOTANICAL,
+    link: "#",
+    isSelected: false,
   },
 ];
 
 export const carousalData = [
   {
-    id: STATICS.MODERN_KITCHEN_UTENSILS,
-    label: `${STATICS.MODERN_KITCHEN_UTENSILS}`,
+    id: STATICS.SERENE_LANDSCAPES,
+    label: `${STATICS.SERENE_LANDSCAPES}`,
     // imgSrc: modernUtensils,
     imgSrc: "https://picsum.photos/id/10/800/600",
   },
   {
-    id: STATICS.STYLISH_PROPS,
-    label: `${STATICS.STYLISH_PROPS}`,
+    id: STATICS.MESMERIZING_MOUNTAINS,
+    label: `${STATICS.MESMERIZING_MOUNTAINS}`,
     // imgSrc: stylishProps,
     imgSrc: "https://picsum.photos/id/11/800/600",
   },
   {
-    id: STATICS.MODERN_DECOR,
-    label: `${STATICS.MODERN_DECOR}`,
+    id: STATICS.SHINY_BEACHES,
+    label: `${STATICS.SHINY_BEACHES}`,
     // imgSrc: modernDecor,
     imgSrc: "https://picsum.photos/id/13/800/600",
   },
   {
-    id: STATICS.MODERN_VASE,
-    label: `${STATICS.MODERN_VASE}`,
+    id: STATICS.ROCKY_SHORES,
+    label: `${STATICS.ROCKY_SHORES}`,
     // imgSrc: modernVase,
     imgSrc: "https://picsum.photos/id/14/800/600",
   },
   {
-    id: STATICS.FRANGRANCE_FLOWERS,
-    label: `${STATICS.FRANGRANCE_FLOWERS}`,
+    id: STATICS.WATERFALL_BLISS,
+    label: `${STATICS.WATERFALL_BLISS}`,
     // imgSrc: fragranceFlowers,
     imgSrc: "https://picsum.photos/id/15/800/600",
   },

@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.searchInput {
+  position: relative;
+
+  input {
+    @include h3($fw: $fwMedium);
+    color: $black7;
+    border: transparent;
+    background-color: transparent;
+    border-bottom: 0.1rem solid $black5;
+    padding: 1.2rem 1.2rem 1.2rem 3rem;
+  }
+}
+
+.searchInput__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

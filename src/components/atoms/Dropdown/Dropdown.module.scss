@@ -1,0 +1,27 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.dropdown {
+  width: 19rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  border: 0.1rem $silver solid;
+  @include displayFlex($flexDirection: column, $alignItems: stretch);
+
+  .dropdown__link {
+    padding: 1rem 1.4rem;
+    transition: 0.1s;
+    @include displayFlex($justifyContent: space-between);
+    @include h3($fw: $fwBold);
+
+    &:hover {
+      background-color: $white2;
+      color: $primaryBlack500;
+    }
+  }
+
+  .dropdown__link.selected {
+    background-color: $white2;
+    color: $primaryBlack500;
+  }
+}

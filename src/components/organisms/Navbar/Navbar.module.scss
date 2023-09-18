@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+
+.navbar {
+  padding: 2.4rem 6.4rem;
+  background-color: $black1;
+  @include displayFlex($justifyContent: space-between);
+
+  .navbar__logoCtr {
+    @include h1($fw: $fwExtraBold);
+    @include displayFlex($gap: 0.6rem);
+    color: $white;
+    flex-shrink: 0;
+    margin-right: 8rem;
+  }
+
+  .navbar__linksCtr {
+    @include displayFlex($justifyContent: flex-end, $gap: 4.4rem);
+    flex: 1;
+
+    nav {
+      // flex: 1;
+      gap: 4.4rem;
+      // justify-content: space-between;
+    }
+  }
+
+  .navbar__searchInput input {
+    width: 46.8rem;
+    height: 4.4rem;
+  }
+}

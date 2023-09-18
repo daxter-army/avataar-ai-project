@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar/Navbar";
-import Carousel from "./components/Carousel/Carousel";
+import Navbar from "./components/organisms/Navbar/Navbar";
+import Carousel from "./components/organisms/Carousel/Carousel";
 
 import logo from "./assets/icons/logo.svg";
 

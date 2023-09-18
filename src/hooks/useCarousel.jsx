@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
 const useCarousel = (isInfinite = false, slidesDataLength) => {
   const STARTING_INDEX = isInfinite ? 2 * slidesDataLength : 0;

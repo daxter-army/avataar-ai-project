@@ -1,0 +1,11 @@
+@import "../../../styles/mixins";
+
+.icon {
+  @include displayFlex;
+  border: none;
+  background-color: transparent;
+}
+
+.icon.isCursor {
+  cursor: pointer;
+}

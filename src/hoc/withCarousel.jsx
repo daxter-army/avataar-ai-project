@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 import useCarousel from "../hooks/useCarousel";
 
@@ -54,7 +54,7 @@ const withCarousel =
     useEffect(() => {
       cardsCtrRef.current.style.transform = getSlideInitialTransformStyle();
       cardsCtrRef.current.style.transition = TRANSITION_STYLE_VALUE;
-    }, []);
+    }, [getSlideInitialTransformStyle, TRANSITION_STYLE_VALUE]);
 
     return (
       <WrappedComponent

@@ -1,0 +1,8 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.anchorTagWpr {
+  text-decoration: none;
+  color: $white;
+  @include h3($fw: $fwBold);
+}

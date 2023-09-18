@@ -1,0 +1,28 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/variables";
+
+.navigationDots {
+  margin-top: 6rem;
+  @include displayFlex($gap: 1.2rem);
+
+  div {
+    @include displayFlex($gap: 1.2rem);
+
+    button {
+      cursor: pointer;
+      opacity: 0.5;
+      border: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: $grey;
+      transition: 0.2s;
+    }
+  }
+
+  .activeSlide {
+    width: 3.2rem;
+    border-radius: 1rem;
+    background-color: $primaryBlue500;
+  }
+}

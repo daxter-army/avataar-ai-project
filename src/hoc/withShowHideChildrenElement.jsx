@@ -1,11 +1,57 @@
 import React, { useEffect, useRef, useState } from "react";
 
+import { moreOptionsData } from "../data/data";
+
 import useWindowSize from "../hooks/useWindowResize";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const withShowHideChildrenElement =
-  (WrappedComponent, visibilityThreshold) =>
+  (WrappedComponent) =>
   ({ linksData, ...restProps }) => {
+    const navbarLinksRef = useRef();
+    const moreButtonRef = useRef();
+
+    const { width: winWidth } = useWindowSize();
+    // LINKS DATA
+    const [linksArrData, setLinksArrData] = useState(linksData);
+    // DROPDOWN OPTIONS DATA
+    const [dropdownListData, setDropdownListData] = useState(moreOptionsData);
+
+    const way3 = () => {};
+
+    useEffect(() => {
+      if (!winWidth || !navbarLinksRef?.current || !moreButtonRef?.current)
+        return;
+
+      const timer = setTimeout(() => {
+        // elementDisplacer();
+        // way3();
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }, [navbarLinksRef?.current, moreButtonRef?.current, winWidth]);
+
+    return (
+      <WrappedComponent
+        // DATA
+        linksData={linksArrData}
+        setLinksArrData={setLinksArrData}
+        dropdownListData={dropdownListData}
+        setDropdownListData={setDropdownListData}
+        // REFS
+        moreButtonRef={moreButtonRef}
+        navbarLinksRef={navbarLinksRef}
+        {...restProps}
+      />
+    );
+  };
+
+export default withShowHideChildrenElement;
+
+//*--------------- WAY 1
+/*
     const navbarLinksRef = useRef();
     const navbarInitialWidth = useRef();
     const prevWidthRef = useRef();
@@ -127,15 +173,45 @@ const withShowHideChildrenElement =
     useEffect(() => {
       console.log("Updated: ", linksArrData);
     }, [linksArrData]);
+*/
 
-    return (
-      <WrappedComponent
-        linksData={linksArrData}
-        navbarLinksRef={navbarLinksRef}
-        // setLinksData={setLinksArrData}
-        {...restProps}
-      />
-    );
-  };
+//* ---------------- WAY 2
+// const elementDisplacer = () => {
+//   const totalNavbarWidth = navbarLinksRef.current.getBoundingClientRect().width;
+//   const moreButtonWidth = moreButtonRef.current.getBoundingClientRect().width;
 
-export default withShowHideChildrenElement;
+//   const navbarWidthWithoutMoreButton = totalNavbarWidth - moreButtonWidth;
+//   const availableSpace = winWidth - moreButtonWidth;
+
+//   // ADDITION TO DROPDOWN
+//   console.log("Navbar: ", navbarWidthWithoutMoreButton);
+//   console.log("Available: ", availableSpace);
+//   if (navbarWidthWithoutMoreButton > availableSpace) {
+//     const newArr = [...linksArrData];
+//     const lastLinkItem = newArr.at(-1);
+//     lastLinkItem.isSelected = false;
+
+//     movedItemsRef.current.push(lastLinkItem);
+//     // setLinksArrData(newArr.slice(0, -1));
+//     // setDropdownListData([...dropdownListData, lastLinkItem]);
+
+//     console.log("Addition section");
+//     // elementDisplacer();
+//   } else {
+//     console.log("remover section");
+//     // REMOVAL TO DROPDOWN
+//     const newDropdownList = [...dropdownListData];
+//     // Elements start from index 3
+//     //! FIX ORDER HERE
+//     const lastItem = newDropdownList.at(-1);
+//     const withoutLastItem = newDropdownList.slice(0, -1);
+
+//     // Width of Dropdown
+//     if (navbarWidthWithoutMoreButton + 188 < availableSpace) {
+//       console.log("remover if section");
+//       // setDropdownListData(withoutLastItem);
+//       // setLinksArrData([...linksArrData, lastItem]);
+//       // firstMoreElement.insertBefore($("#main .more"));
+//     }
+//   }
+// };
