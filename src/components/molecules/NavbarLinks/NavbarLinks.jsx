@@ -131,7 +131,7 @@ const NavbarLinks = ({
               : (hiddenItems + 1) * 70 + 0)
           }px)`,
         }}
-        className={cx(styles.dropdownBtn)}
+        className={cx(styles.navbarLinksWpr__dropdownBtn)}
       >
         <AnchorTag
           customClass={cx({ [styles.dropdown__activeLabel]: isDropdownOn })}

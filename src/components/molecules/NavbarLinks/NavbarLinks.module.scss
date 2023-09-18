@@ -5,11 +5,23 @@
   // flex-wrap: wrap;
   list-style-type: none;
 
-  .dropdownBtn {
+  .navbarLinksWpr__dropdownBtn {
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 40;
     align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -5px;
+      left: -44%;
+      // right: -20%;
+      width: 200%;
+      height: calc(100% + 10px);
+      background-color: $black1;
+    }
   }
 
   .navbarLinksWpr__dropdown {
