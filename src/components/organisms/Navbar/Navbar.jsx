@@ -15,8 +15,8 @@ import STATICS from "../../../enums";
 import styles from "./Navbar.module.scss";
 
 const Navbar = ({ logoSrc, navbarLinksData }) => {
-  const searchInputRef = useRef();
   const [value, setValue] = useState("");
+  const searchInputRef = useRef();
 
   const VisibleSearchInput = withShowHideElement(SearchInput, 0.5);
   const MinimizableNavbarLinks = withShowHideChildrenElement(NavbarLinks);
