@@ -1,5 +1,7 @@
 # Project Assignment
 
+## Demo Link: [Visit Here](daxter-army.github.io/avataar-ai-project)
+
 ## NOTES
 
 1. I have tried to follow the convention as per the design system (from the figma file) as much as possible, using the same **variable names as used in the figma file, to mitigate the design and development differences**.
