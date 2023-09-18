@@ -1,0 +1,26 @@
+const STATICS = {
+  NAVBAR_TITLE: "E-COMM",
+  HOME: "HOME",
+  ELECTRONICS: "ELECTRONICS",
+  BOOKS: "BOOKS",
+  MUSIC: "MUSIC",
+  MOVIES: "MOVIES",
+  CLOTHING: "CLOTHING",
+  GAMES: "GAMES",
+  MORE: "MORE",
+  FURNITURE: "FURNITURE",
+  TRAVEL: "TRAVEL",
+  BOTANICAL: "BOTANICAL",
+  NAVBAR_SEARCH_PLACEHOLDER: "Search something",
+  FEATURED_PRODUCT: "Featured Product",
+  EXPLORE_AND_DISCOVER: "Explore and discover a variety of products",
+  MODERN_KITCHEN_UTENSILS: "Modern Kitchen utensils",
+  MODERN_DECOR: "Modern decoration",
+  FRANGRANCE_FLOWERS: "Fresh Flowers",
+  MODERN_VASE: "Modern Vase with Sunflower",
+  STYLISH_PROPS: "Stylish Props",
+  INFINITE_CAROUSEL_TYPE: "Infinite",
+  FINITE_CAROUSEL_TYPE: "Finite",
+};
+
+export default STATICS;
